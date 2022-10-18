@@ -1,0 +1,126 @@
+#stenoKeyboard{
+	/* Box */
+	width: 280px;
+	height: 160px;
+	margin: 0;
+
+    /* Colors */
+	background-color: #FFFFFF;
+}
+
+.topRow {
+    /* top row */
+	width: 100%;
+	height: 25%;
+	padding: 0;
+	border: 0;
+	margin: 0 0 2px 0;
+}
+
+.midRow {
+    /* mid row */
+	width: 100%;
+	height: 25%;
+	padding: 0;
+	border: 0;
+	margin: 0 0 6px 0;
+}
+
+.bottomRow {
+    /* vowels bottom row */
+	width: 100%;
+	height: 25%;
+	padding: 0;
+	border: 0;
+	margin: 10px 0 0 0;
+}
+
+.key {
+	/* Positioning */
+	float: left;
+
+	/* Box */
+	width: 7.5%;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	margin: 0 1.25% 0 1.25%;
+
+	/* Color */	
+    color: #ffffff;
+	background-color: #000000;
+
+	/* Text */
+	font-family: 'Verdana';
+	font-size: 10pt;
+	text-align: center;
+	line-height: 41px;
+}
+.square {
+	/* Styling */
+	-webkit-border-radius: 12.5% / 7.5%;
+	-moz-border-radius: 12.5% / 7.5%;
+	border-radius: 12.5% / 7.5%;
+}
+
+.rounded {
+	/* Styling */
+	-webkit-border-radius: 12.5% / 7.5%;
+	-webkit-border-bottom-right-radius: 50% 30%;
+	-webkit-border-bottom-left-radius: 50% 30%;
+	-moz-border-radius: 12.5% / 7.5%;
+	-moz-border-radius-bottomright: 50% 30%;
+	-moz-border-radius-bottomleft: 50% 30%;
+	border-radius: 12.5% / 7.5%;
+	border-bottom-right-radius: 50% 30%;
+	border-bottom-left-radius: 50% 30%;
+}
+    
+#keyS1, #keyS2 {
+	/* Box */
+	margin-left: 0;
+}
+
+#keyH1, #keyR1 {
+	/* Box */
+	margin-right: 1.875%;
+}
+
+#keyAsk1, #keyAsk2 {
+	/* Box */
+	margin-left: 1.875%;
+	margin-right: 1.875%;
+}
+
+#keyF2, #keyR2 {
+	/* Box */
+	margin-left: 1.875%;
+}
+
+#keyD, #keyZ {
+	/* Box */
+	margin-right: 0;
+}
+
+#keyA {
+	/* Box */
+	margin-left: 27%;
+	margin-right: 0.3125%;	
+}
+
+#keyO {
+	/* Box */
+	margin-left: 0.3125%;
+	margin-right: 1.5625%;	
+}
+
+#keyE {
+	/* Box */
+	margin-left: 1.5625%;
+	margin-right: 0.3125%;	
+}
+
+#keyU {
+	/* Box */
+	margin-left: 0.3125%;
+}
