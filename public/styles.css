@@ -1,26 +1,60 @@
+h1{
+	text-align:center;
+	color:white;
+	background: linear-gradient( #7DE400, #009CE4);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+body{
+	background-color: white;
+
+}
+
+.givenWord{
+	width:400;
+	margin:auto;
+
+}
+.possibleAnswers{
+	width:400px;
+	margin:auto;
+}
+.textbox{
+	height:400px;
+	width:600px;
+	margin:auto;
+}
+
 .stenoKeyboard{
 	/* Box */
+	
 	width: 280px;
 	height: 160px;
-	margin: 0;
-
+	margin: auto;
+	/*border-style:inset;*/
+	/*border width, border radius, padding */
     /* Colors */
-	background-color: #FFFFFF;
+	/*background-color: #FFFFFF;*/
+
 }
 
 .topRow {
     /* top row */
+	
 	width: 100%;
-	height: 25%;
+	height: 30%;
 	padding: 0;
 	border: 0;
-	margin: 0 0 2px 0;
+	margin: auto;
+	padding-bottom: 2px;
 }
 
 .midRow {
     /* mid row */
+	margin: 0 auto;
 	width: 100%;
-	height: 25%;
+	height: 30%;
 	padding: 0;
 	border: 0;
 	margin: 0 0 6px 0;
@@ -28,8 +62,9 @@
 
 .bottomRow {
     /* vowels bottom row */
+	margin:auto;
 	width: 100%;
-	height: 25%;
+	height: 30%;
 	padding: 0;
 	border: 0;
 	margin: 10px 0 0 0;
@@ -92,7 +127,7 @@
 	margin-right: 1.875%;
 }
 
-#keyF2, #keyR2 {
+#keyF, #keyR2 {
 	/* Box */
 	margin-left: 1.875%;
 }

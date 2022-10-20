@@ -1,13 +1,24 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Qwerty Steno Interface</title>
-        <script>app.js</script>
+        <meta charset="UTF-8">
+        <script src="app.js"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        
+        <h1>QWERTY STENO INTERFACE</h1>
 
-        <h1>Qwerty Steno Interface</h1>
+        <div class="givenWord">
+            <h2>The word to type is:<span id="word"></span></h2>
+        </div>
+        <div id="textbox">
+            <textarea id="textinput"></textarea>
+        </div>
+        <div class="possibleAnswers">
+            <h2>Possible Answers:<span id="answers"></span></h2>
+        </div>
         <div class="stenoKeyboard">
             <div id="keys" style="display: block;">
                 <div class="topRow">
@@ -31,7 +42,7 @@
                     <div class="key rounded" id="keyR2">R</div>
                     <div class="key rounded" id="keyB">B</div>
                     <div class="key rounded" id="keyG">G</div>
-                    <div class="key rounded" id="keyS">S</div>
+                    <div class="key rounded" id="keyS3">S</div>
                     <div class="key rounded" id="keyZ">Z</div>
                 </div>
                 <div class="bottomRow">
@@ -42,7 +53,7 @@
                 </div>
             </div>
         </div>
-
+       
 
 
 
