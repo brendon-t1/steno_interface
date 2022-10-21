@@ -9,15 +9,12 @@
     <body>
         <h1>QWERTY STENO INTERFACE</h1>
         <div class="givenWord">
-            <h2>The word to type is:<span id="word"></span></h2>
+            <h2>Type a word in stenography letters. The keyboard lights up the key placement required for the word.</h2>
         </div>
         <div id="textbox">
             <textarea id="textinput"></textarea>
-            <input type="button" id="mcButton" value="click me">
-            <input type="button" id="mcClearButton" value="clear">
-        </div>
-        <div class="possibleAnswers">
-            <h2>Possible Answers:<span id="answers"></span></h2>
+            <input type="button" id="goButton" value="click me">
+            <input type="button" id="ClearButton" value="clear">
         </div>
         <div class="stenoKeyboard">
             <div id="keys" style="display: block;">
@@ -52,6 +49,11 @@
                     <div class="key rounded" id="keyU">U</div>
                 </div>
             </div>
+        </div>
+        <div class="dictLink">
+            <p>
+                Here is a link to a stenography dictionary <a href="http://stenoknight.com/plover/ploverlookup/">Click Here</a>
+            </p>
         </div>
     </body>
 </html>

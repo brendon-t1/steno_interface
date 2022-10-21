@@ -1,12 +1,12 @@
-function mcReader(event){
-    let mcTextInput = document.getElementById('textinput');
+function reader(event){
+    let textInput = document.getElementById('textinput');
     if(event.type === 'click'){
-        mcWriter(mcTextInput.value);
+        writer(textInput.value);
     }
     else if (event.key === "Enter") {
         // Cancel the default action, if needed
         event.preventDefault();
-        mcWriter(mcTextInput.value);
+        writer(textInput.value);
     }
 };
 
@@ -19,6 +19,7 @@ let left_keys = {
     W:'keyW',
     R:'keyR1',
 };
+
 let right_keys = {
     F:'keyF',
     P:'keyP2',
@@ -31,42 +32,44 @@ let right_keys = {
     S:'keyS3',
     Z:'keyZ',
 };
+
 let vowel_keys = {
     A: 'keyA',
     O: 'keyO',
     E: 'keyE',
     U: 'keyU',
 };
-let mcAsterix = false;
 
-function mcSplitter(mcWord){
-    mcAsterix = false;
-    mcWord = mcWord.toUpperCase();
+let asterix = false;
+
+function splitter(word){
+    asterix = false;
+    word = word.toUpperCase();
     
     let left_keys = '';
     let right_keys = '';
     let vowel_keys = '';
 
-    if (mcWord.includes('*')){
-        mcWord.replace('*','');
-        mcAsterix = true;
+    if (word.includes('*')){
+        word.replace('*','');
+        asterix = true;
     }
     
     // - means no vowels
-    if (mcWord.includes('-')){
-        splitted = mcWord.split('-')
+    if (word.includes('-')){
+        splitted = word.split('-')
         left_keys = splitted[0]
         right_keys = splitted[1]
     }
     else {
         let vowels = ['A','O','E','U']
         for(let i=0; i<vowels.length; i++){
-            if (mcWord.includes(vowels[i])){
+            if (word.includes(vowels[i])){
                 vowel_keys += vowels[i]
             }
-            mcWord = mcWord.replace(vowels[i],'-');
+            word = word.replace(vowels[i],'-');
         }
-        splitted = mcWord.split(/-+/);
+        splitted = word.split(/-+/);
         left_keys = splitted[0];
         right_keys = splitted[1];        
     }
@@ -79,18 +82,18 @@ function mcSplitter(mcWord){
     
 };
 
-function mcWriter(mcSpelling){
-    let mcSplit = mcSplitter(mcSpelling);
-    let left = mcSplit.left_keys;
-    let right = mcSplit.right_keys;
-    let vowels = mcSplit.vowel_keys;
+function writer(spelling){
+    let split = splitter(spelling);
+    let left = split.left_keys;
+    let right = split.right_keys;
+    let vowels = split.vowel_keys;
 
     let retval = [];
 
     for(let i=0; i<left.length; i++){
         retval.push(left_keys[left[i]]);
     }
-    if (mcAsterix===true){
+    if (asterix===true){
         retval.push('keyAsk1');
     }
     for(let i=0; i<vowels.length; i++){
@@ -100,19 +103,19 @@ function mcWriter(mcSpelling){
         retval.push(right_keys[right[i]]);
     }
 
-    mcHighlighter(retval);
+    highlighter(retval);
 };
 
-function mcHighlighter(keyArray){
-    mcClearer();
+function highlighter(keyArray){
+    clearer();
     for(let i=0; i<keyArray.length; i++){
-        let mcId = keyArray[i];
-        let mcElement = document.getElementById(mcId);
-        mcElement.style = "background:red;"
+        let id = keyArray[i];
+        let element = document.getElementById(id);
+        element.style = "background:red;"
     }
 };
 
-function mcClearer(){
+function clearer(){
     let keys = document.getElementsByClassName("key");
     for(let i=0; i<keys.length; i++){
         keys[i].style = "background:black;";
@@ -120,9 +123,9 @@ function mcClearer(){
 }
 
 window.addEventListener('load',function(){
-    document.getElementById('textinput').addEventListener('keydown', mcReader);
-    document.getElementById('mcButton').addEventListener('click', mcReader);
-    document.getElementById('mcClearButton').addEventListener('click', mcClearer);
+    document.getElementById('textinput').addEventListener('keydown', reader);
+    document.getElementById('goButton').addEventListener('click', reader);
+    document.getElementById('ClearButton').addEventListener('click', clearer);
 });
 
 //STKPWHRAO*EUFRPBLGTSDZ

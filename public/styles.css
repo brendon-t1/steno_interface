@@ -4,31 +4,84 @@ h1{
 	background: linear-gradient( #7DE400, #009CE4);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	font-family: 'Verdana';
 }
 
 body{
 	background-color: white;
+}
 
+.dictLink{
+	margin:auto;
+	font-family: 'Verdana';
+}
+
+a{
+	text-decoration: none;
+	text-align: center;
+	color: #7DE400;
+
+}
+
+a:link{
+	color: #7DE400;
+}
+
+p{
+	text-align:center;
+}
+
+#goButton {
+	background-color: black;
+	border-radius: 6px;
+	border: none;
+	color: white;
+	padding: 4px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+#ClearButton {
+	background-color: black;
+	border-radius: 6px;
+	border: none;
+	color: white;
+	padding: 4px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 }
 
 .givenWord{
 	width:400;
 	margin:auto;
-
+	text-align: center;
+	font-family: 'Verdana';
+	font-size: 10pt;
 }
+
 .possibleAnswers{
 	width:400px;
 	margin:auto;
 }
-.textbox{
-	height:400px;
+
+#textbox{
+	height:100px;
 	width:600px;
-	margin:auto;
+	margin:0 auto;
+	text-align: center;
+	/*padding-top: 10px;
+	padding-bottom: 10px;*/
 }
 
 .stenoKeyboard{
-	/* Box */
-	
 	width: 280px;
 	height: 160px;
 	margin: auto;
@@ -36,32 +89,27 @@ body{
 	/*border width, border radius, padding */
     /* Colors */
 	/*background-color: #FFFFFF;*/
-
 }
 
 .topRow {
-    /* top row */
-	
 	width: 100%;
 	height: 30%;
 	padding: 0;
 	border: 0;
 	margin: auto;
-	padding-bottom: 2px;
+	padding-bottom: 4px;
 }
 
 .midRow {
-    /* mid row */
 	margin: 0 auto;
 	width: 100%;
 	height: 30%;
-	padding: 0;
+	padding-bottom: 4px;
 	border: 0;
 	margin: 0 0 6px 0;
 }
 
 .bottomRow {
-    /* vowels bottom row */
 	margin:auto;
 	width: 100%;
 	height: 30%;
@@ -71,35 +119,26 @@ body{
 }
 
 .key {
-	/* Positioning */
 	float: left;
-
-	/* Box */
 	width: 7.5%;
 	height: 100%;
 	padding: 0;
 	border: 0;
 	margin: 0 1.25% 0 1.25%;
-
-	/* Color */	
     color: #ffffff;
 	background-color: #000000;
-
-	/* Text */
 	font-family: 'Verdana';
 	font-size: 10pt;
 	text-align: center;
 	line-height: 41px;
 }
 .square {
-	/* Styling */
 	-webkit-border-radius: 12.5% / 7.5%;
 	-moz-border-radius: 12.5% / 7.5%;
 	border-radius: 12.5% / 7.5%;
 }
 
 .rounded {
-	/* Styling */
 	-webkit-border-radius: 12.5% / 7.5%;
 	-webkit-border-bottom-right-radius: 50% 30%;
 	-webkit-border-bottom-left-radius: 50% 30%;
@@ -112,50 +151,41 @@ body{
 }
     
 #keyS1, #keyS2 {
-	/* Box */
 	margin-left: 0;
 }
 
 #keyH1, #keyR1 {
-	/* Box */
 	margin-right: 1.875%;
 }
 
 #keyAsk1, #keyAsk2 {
-	/* Box */
 	margin-left: 1.875%;
 	margin-right: 1.875%;
 }
 
 #keyF, #keyR2 {
-	/* Box */
 	margin-left: 1.875%;
 }
 
 #keyD, #keyZ {
-	/* Box */
 	margin-right: 0;
 }
 
 #keyA {
-	/* Box */
 	margin-left: 27%;
 	margin-right: 0.3125%;	
 }
 
 #keyO {
-	/* Box */
 	margin-left: 0.3125%;
 	margin-right: 1.5625%;	
 }
 
 #keyE {
-	/* Box */
 	margin-left: 1.5625%;
 	margin-right: 0.3125%;	
 }
 
 #keyU {
-	/* Box */
 	margin-left: 0.3125%;
 }
